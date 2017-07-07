@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.developers.smartytoast.SmartyToast;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -23,8 +25,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this,SecondActivity.class);
-                startActivity(intent);
+                intent.putExtra("key1","value1");
+                intent.putExtra("key2","value2");
 
+
+                startActivity(intent);
+               // SmartyToast.makeText(getApplicationContext(),"Your message",SmartyToast.LENGTH_SHORT,SmartyToast.UPDATE);
             }
         });
         
